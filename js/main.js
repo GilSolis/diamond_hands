@@ -1,4 +1,5 @@
-document.querySelector('button').addEventListener('click', showPrice)
+document.querySelector('#search').addEventListener('click', showPrice)
+document.querySelector('#tryAgain').addEventListener('click', tryAgain)
 
 function showPrice() {
     const choice = document.querySelector('input').value
@@ -31,5 +32,17 @@ function showPrice() {
         })
         .catch(err => {
             console.log(`error ${err}`)
+            document.querySelector('#name').innerText = "Can not find stock, try again!"
         });
+}
+
+function tryAgain() {
+    document.querySelector('input').value = ''
+    let stats = document.querySelector(".container");
+    if (stats.style.display === "none") {
+        stats.style.display = "block";
+    } else {
+        stats.style.display = "none";
+    }
+
 }
