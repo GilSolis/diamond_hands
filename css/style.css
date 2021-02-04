@@ -6,7 +6,6 @@ img {
   display: block;
   margin: 0 auto;
 }
-
-.container {
-  border: 2px red solid;
+.mainContainer {
+  text-align: center;
 }
